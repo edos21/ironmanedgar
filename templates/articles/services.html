@@ -1,0 +1,29 @@
+{% load  staticfiles articles_tags %}
+{% get_articles "service-home" as articles %}
+<section id="services" >
+      <div class="container">
+
+          <div class="section-header">
+              <h2 class="section-title text-center wow fadeInDown">Our Services</h2>
+              <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+          </div>
+
+          <div class="row">
+              <div class="features">
+                {% for article in articles %}
+                  <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="{{ forloop.counter0 }}00ms">
+                      <div class="media service-box">
+                          <div class="pull-left">
+                              <img src="{{ MEDIA_URL }}{{ article.file }}" alt="img">
+                          </div>
+                          <div class="media-body">
+                              <h4 class="media-heading">{{article.title}}</h4>
+                              <p>{{article.description}}</p>
+                          </div>
+                      </div>
+                  </div><!--/.col-md-4-->
+                {% endfor %}
+              </div>
+          </div><!--/.row-->
+      </div><!--/.container-->
+  </section><!--/#services-->

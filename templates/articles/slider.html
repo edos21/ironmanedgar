@@ -1,0 +1,24 @@
+{% load  staticfiles articles_tags %}
+{% get_articles "slider-home" as articles %}
+
+<section id="main-slider">
+    <div class="owl-carousel">
+        {% for article in articles %}
+        <div class="item" style="background-image: url({{ MEDIA_URL }}{{ article.file }});">
+            <div class="slider-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <div class="carousel-content">
+                                <h2>{{ article.title }}</h2>
+                                <p>{{ article.description }}</p>
+                                <a class="btn btn-primary btn-lg" href="#">Find Out More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.item-->
+        {% endfor %}
+    </div><!--/.owl-carousel-->
+</section><!--/#main-slider-->
