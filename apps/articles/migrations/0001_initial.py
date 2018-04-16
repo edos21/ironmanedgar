@@ -3,7 +3,7 @@
 import articles
 import datetime
 from django.db import migrations, models
-
+from apps.main import MultiSelectField
 
 class Migration(migrations.Migration):
 
@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
             name='Article',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('block', articles.MultiSelectField(choices=[('slider-home', '[Home/Slider] (1377*700)')], max_length=1000, verbose_name='Block')),
+                ('block', MultiSelectField(choices=[('slider-home', '[Home/Slider] (1377*700)')], max_length=1000, verbose_name='Block')),
                 ('title', models.CharField(max_length=250, verbose_name='Title')),
                 ('description', models.TextField(blank=True, null=True, verbose_name='Description')),
                 ('link', models.CharField(blank=True, max_length=100, null=True, verbose_name='Link')),
