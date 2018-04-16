@@ -5,7 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
 
 from .managers import LiveArticleManager
-from . import MultiSelectField
+from apps.main import MultiSelectField
 
 
 class Article(models.Model):
