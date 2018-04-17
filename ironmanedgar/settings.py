@@ -33,6 +33,7 @@ DEBUG = True
 INSTALLED_APPS = [
     'apps.main.apps.MainConfig',
     'apps.articles.apps.ArticlesConfig',
+    'apps.siteinfo.apps.SiteinfoConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
