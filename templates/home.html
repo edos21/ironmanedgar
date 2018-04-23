@@ -642,21 +642,22 @@
 
             <div class="col-sm-6">
 
-            <form action="#" method="post" name="contact-form" id="main-contact-form">
-                                <div class="form-group">
-                                    <input type="text" required placeholder="Name" class="form-control" name="name">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" required placeholder="Email" class="form-control" name="email">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" required placeholder="Subject" class="form-control" name="subject">
-                                </div>
-                                <div class="form-group">
-                                    <textarea required placeholder="Message" rows="8" class="form-control" name="message"></textarea>
-                                </div>
-                                <button class="btn btn-primary" type="submit">SUBMIT</button>
-                            </form>
+            <form action="send-mail/" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <input type="text" required placeholder="Name" class="form-control" name="name">
+                </div>
+                <div class="form-group">
+                    <input type="email" required placeholder="Email" class="form-control" name="email">
+                </div>
+                <div class="form-group">
+                    <input type="text" required placeholder="Subject" class="form-control" name="subject">
+                </div>
+                <div class="form-group">
+                    <textarea required placeholder="Message" rows="8" class="form-control" name="message"></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit">SUBMIT</button>
+            </form>
             </div>
 
 
