@@ -148,8 +148,7 @@ STATICFILES_DIRS = [
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'edos21@gmail.com'
-EMAIL_HOST_PASSWORD = 'lyoko5'
-EMAIL_PORT = 587
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = '37740a709beb42'
+EMAIL_HOST_PASSWORD = '469c81d05cbc05'
+EMAIL_PORT = '2525'
