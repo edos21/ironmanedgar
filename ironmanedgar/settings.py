@@ -151,5 +151,5 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'edos21@gmail.com'
-EMAIL_HOST_PASSWORD = 'test'
+EMAIL_HOST_PASSWORD = 'lyoko5'
 EMAIL_PORT = 587
