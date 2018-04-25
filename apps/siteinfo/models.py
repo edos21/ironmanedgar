@@ -18,7 +18,7 @@ class SiteInfo(models.Model):
     address = models.TextField(_("Address"), null=True, blank=True)
     #Social Info
     facebook = models.URLField(_("Facebook"), null=True, blank=True)
-    twitter = models.URLField(_("Facebook"), null=True, blank=True)
+    twitter = models.URLField(_("Twitter"), null=True, blank=True)
     # Page Sections
     sections =  models.ManyToManyField(Section, verbose_name=_("Sections"), help_text="at least 1 section is required")
 

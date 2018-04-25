@@ -31,9 +31,6 @@ DEBUG = True
 # Application definition
 
 INSTALLED_APPS = [
-    'apps.main.apps.MainConfig',
-    'apps.articles.apps.ArticlesConfig',
-    'apps.siteinfo.apps.SiteinfoConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,6 +41,9 @@ INSTALLED_APPS = [
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    'main',
+    'articles',
+    'siteinfo',
 ]
 
 MIDDLEWARE = [
@@ -72,6 +72,7 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'apps.siteinfo.context_processors.site_info',
             ],
             'debug': DEBUG,
         },

@@ -16,7 +16,7 @@ def contact(request):
             send_mail(subject, message, from_email, ['edos21@gmail.com'])
         except BadHeaderError:
             return HttpResponse('Invalid header found.')
-        return HttpResponseRedirect('/contact/thanks/')
+        return HttpResponseRedirect('/?send-mail')
     else:
         # In reality we'd use a form class
         # to get proper validation errors.
