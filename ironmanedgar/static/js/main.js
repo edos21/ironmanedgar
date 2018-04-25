@@ -193,19 +193,25 @@ jQuery(function($) {'use strict';
 	});
 
 	// Contact form
-	var form = $('#main-contact-form');
-	form.submit(function(event){
-		event.preventDefault();
-		var form_status = $('<div class="form_status"></div>');
-		$.ajax({
-			url: $(this).attr('action'),
-			beforeSend: function(){
-				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Email is sending...</p>').fadeIn() );
+	var getUrlParameter = function getUrlParameter(sParam) {
+    	var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+		for (i = 0; i < sURLVariables.length; i++) {
+			sParameterName = sURLVariables[i].split('=');
+
+			if (sParameterName[0] === sParam) {
+				return sParameterName[1] === undefined ? true : sParameterName[1];
 			}
-		}).done(function(data){
-			form_status.html('<p class="text-success">Thank you for contact us. As early as possible  we will contact you</p>').delay(3000).fadeOut();
-		});
-	});
+		}
+	};
+	var send_mail = getUrlParameter('send-mail');
+	if(send_mail){
+		$('.defaultform').hide();
+		$('#main-contact-form').html('<p class="text-success">Thank you for contact us. As early as possible  we will contact you</p>');
+	}
 
 	//Pretty Photo
 	$("a[rel^='prettyPhoto']").prettyPhoto({
