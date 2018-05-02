@@ -112,6 +112,10 @@ ARTICLE_BLOCKS = (
      {'template_name': 'articles/slider.html'}),
     ('service-home', '[Home/Service] (icon 88*58)',
      {'template_name': 'articles/services.html'}),
+    ('fun-facts', '[Home/FunFacts]',
+     {'template_name': 'articles/fun-facts.html'}),
+    ('portfolio', '[Home/Portfolio] (project image)',
+     {'template_name': 'articles/portfolio.html'}),
 )
 
 # Internationalization

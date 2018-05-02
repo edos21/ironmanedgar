@@ -10,177 +10,65 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="base.html"><img src="{{ STATIC_URL }}images/logo.png" alt="logo"></a>
+                    <a class="navbar-brand" href="base.html"><img src="{{ MEDIA_URL }}{{ site.logo }}" alt="logo"></a>
                 </div>
 
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class="scroll active"><a href="#home">Home </a></li>
-                        <li class="scroll"><a href="#services">Service </a></li>
-                        <li class="scroll"><a href="#portfolio">Portfolio</a></li>
-                        <li class="scroll"><a href="#meet-team">Team </a></li>
-                        <li class="scroll"><a href="#pricing">Price</a></li>
-                        <li class="scroll"><a href="#blog">  Blog </a></li>
-                        <li class="scroll"><a href="#testimonial"> Testimonial </a></li>
-                       <li class="scroll"><a href="#get-in-touch">Contact</a></li>
+                        {% if "Home" in sections %}
+                            <li class="scroll active"><a href="#home">Home </a></li>
+                        {% endif %}
+                        {% if "Service" in sections %}
+                            <li class="scroll"><a href="#services">Service </a></li>
+                        {% endif %}
+                        {% if "Portfolio" in sections %}
+                            <li class="scroll"><a href="#portfolio">Portfolio</a></li>
+                        {% endif %}
+                        {% if "Team" in sections %}
+                            <li class="scroll"><a href="#meet-team">Team </a></li>
+                        {% endif %}
+                        {% if "Price" in sections %}
+                            <li class="scroll"><a href="#pricing">Price</a></li>
+                        {% endif %}
+                        {% if "Blog" in sections %}
+                            <li class="scroll"><a href="#blog">  Blog </a></li>
+                        {% endif %}
+                        {% if "Testimonial" in sections %}
+                            <li class="scroll"><a href="#testimonial"> Testimonial </a></li>
+                        {% endif %}
+                        {% if "Contact" in sections %}
+                            <li class="scroll"><a href="#get-in-touch">Contact</a></li>
+                        {% endif %}
                     </ul>
                 </div>
             </div><!--/.container-->
         </nav><!--/nav-->
     </header><!--/header-->
-    {% block slider %}
-        {% include "articles/slider.html" %}
-    {% endblock %}
-    
-    {% block services %}
-        {% include "articles/services.html" %}
-    {% endblock %}
+    {% if "Home" in sections %}
+        {% block slider %}
+            {% include "articles/slider.html" %}
+        {% endblock %}
+    {% endif %}
 
-    <section id="animated-number">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">Fun Facts</h2>
-                <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
-            </div>
+    {% if "Service" in sections %}
+        {% block services %}
+            {% include "articles/services.html" %}
+        {% endblock %}
+    {% endif %}
 
-            <div class="row text-center">
-                <div class="col-sm-3 col-xs-6">
-                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
-                        <div class="animated-number" data-digit="136800" data-duration="1000"></div>
-                        <strong>Lorem Ipsum</strong>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-xs-6">
-                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
-                        <div class="animated-number" data-digit="1231+" data-duration="1000"></div>
-                        <strong>Lorem Ipsum</strong>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-xs-6">
-                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
-                        <div class="animated-number" data-digit="6000" data-duration="1000"></div>
-                        <strong>Lorem Ipsum</strong>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-xs-6">
-                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
-                        <div class="animated-number" data-digit="2000" data-duration="1000"></div>
-                        <strong>Lorem Ipsum</strong>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!--/#animated-number-->
+    {% if "Fun facts" in sections %}
+        {% block funfacts %}
+            {% include "articles/fun-facts.html" %}
+        {% endblock %}
+    {% endif %}
 
-    <section id="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">OUR Latest Work</h2>
-                <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
-            </div>
+    {% if "Portfolio" in sections %}
+        {% block portfolio %}
+            {% include "articles/portfolio.html" %}
+        {% endblock %}
+    {% endif %}
 
-            <div class="text-center">
-                <ul class="portfolio-filter">
-                    <li><a class="active" href="#" data-filter="*">All</a></li>
-                    <li><a href="#" data-filter=".creative">Printing</a></li>
-                    <li><a href="#" data-filter=".corporate"> Web  </a></li>
-                    <li><a href="#" data-filter=".portfolio">Illustration </a></li>
-                    <li><a href="#" data-filter=".portfolio">Media </a></li>
-                </ul><!--/#portfolio-filter-->
-            </div>
-
-            <div class="portfolio-items">
-                <div class="portfolio-item creative">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="{{ STATIC_URL }}images/work_1.jpg" alt="">
-                        <div class="portfolio-info">
-                            <h3>Portfolio Item 1</h3>
-                            Lorem Ipsum Dolor Sit
-
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-
-                <div class="portfolio-item corporate portfolio">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="{{ STATIC_URL }}images/work_2.jpg" alt="">
-                        <div class="portfolio-info">
-                            <h3>Portfolio Item 2</h3>
-                            Lorem Ipsum Dolor Sit
-
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-
-                <div class="portfolio-item creative">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="{{ STATIC_URL }}images/work_3.jpg" alt="">
-                        <div class="portfolio-info">
-                            <h3>Portfolio Item 3</h3>
-                            Lorem Ipsum Dolor Sit
-
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-
-                <div class="portfolio-item corporate">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="{{ STATIC_URL }}images/work_4.jpg" alt="">
-                        <div class="portfolio-info">
-                            <h3>Portfolio Item 4</h3>
-                            Lorem Ipsum Dolor Sit
-
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-
-                <div class="portfolio-item creative portfolio">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="{{ STATIC_URL }}images/work_5.jpg" alt="">
-                        <div class="portfolio-info">
-                            <h3>Portfolio Item 5</h3>
-                            Lorem Ipsum Dolor Sit
-
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-
-                <div class="portfolio-item corporate">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="{{ STATIC_URL }}images/work_6.jpg" alt="">
-                        <div class="portfolio-info">
-                            <h3>Portfolio Item 5</h3>
-                            Lorem Ipsum Dolor Sit
-
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-
-                <div class="portfolio-item creative portfolio">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="{{ STATIC_URL }}images/work_7.jpg" alt="">
-                        <div class="portfolio-info">
-                            <h3>Portfolio Item 7</h3>
-                            Lorem Ipsum Dolor Sit
-
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-
-                <div class="portfolio-item corporate">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="{{ STATIC_URL }}images/work_8.jpg" alt="">
-                        <div class="portfolio-info">
-                            <h3>Portfolio Item 8</h3>
-                            Lorem Ipsum Dolor Sit
-
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-            </div>
-        </div><!--/.container-->
-    </section><!--/#portfolio-->
-
+    {% if "Team" in sections %}
     <section id="meet-team">
         <div class="container">
             <div class="section-header">
@@ -245,7 +133,9 @@
 
         </div>
     </section><!--/#meet-team-->
+    {% endif %}
 
+    {% if "Pricing" in sections %}
     <section id="pricing">
         <div class="container">
             <div class="section-header">
@@ -328,7 +218,9 @@
             </div>
         </div>
     </section><!--/#pricing-->
+    {% endif %}
 
+    {% if "Blog" in sections %}
     <section id="blog">
         <div class="container">
             <div class="section-header">
@@ -538,9 +430,9 @@
 
         </div>
     </section>
+    {% endif %}
 
-    <!--/#blog-->
-
+    {% if "Testimonial" in sections %}
     <section id="testimonial">
         <div class="container">
             <div class="section-header">
@@ -608,7 +500,9 @@
 
         </div>
     </section> <!--/#testimonial-->
+    {% endif %}
 
+    {% if "Contact" in sections %}
     <section id="get-in-touch">
         <div class="container">
             <div class="section-header">
@@ -618,48 +512,53 @@
 
             <div class="row">
             <div class="col-sm-6">
-            <div class="address">
-            <h4>Address</h4>
-            <p>Lorem ipsum dolor sit amet, ETX consectetur adipiscing elit,<br>
- sed do ETX eiusmod tempor incididunt ut labore et</p>
-            </div>
+                {%  if site.address %}
+                <div class="address">
+                <h4>Address</h4>
+                <p>{{ site.address }}</p>
+                </div>
+                {% endif %}
 
-            <div class="address">
-            <h4>Phone </h4>
-            <p>123-456-7890</p>
-            </div>
+                {% if site.phone %}
+                <div class="address">
+                <h4>Phone </h4>
+                <p>{{ site.phone }}</p>
+                </div>
+                {% endif %}
 
-            <div class="address">
-            <h4>Email</h4>
-            <p><a href="#">info@companyname.com </a></p>
-            </div>
+                {% if site.email %}
+                <div class="address">
+                <h4>Email</h4>
+                <p><a href="{{ site.email }}">{{ site.email }} </a></p>
+                </div>
+                {% endif %}
 
-            <div class="address">
-            <h4>Follow Us</h4>
-            <p><a href="#"><i class="fa fa-facebook"></i></a>  &nbsp; <a href="#"><i class="fa fa-twitter"></i></a> &nbsp; <a href="#"><i class="fa fa-google-plus"></i></a></p>
-            </div>
-            </div>
+                <div class="address">
+                <h4>Follow Us</h4>
+                <p><a href="{{ site.facebook }}"><i class="fa fa-facebook"></i></a>  &nbsp; <a href="{{ site.twitter }}"><i class="fa fa-twitter"></i></a> </p>
+                </div>
+                </div>
 
             <div class="col-sm-6">
 
-            <form action="send-mail/" method="post" id="main-contact-form">
-                <div class="defaultform">
-                    {% csrf_token %}
-                    <div class="form-group">
-                        <input type="text" required placeholder="Name" class="form-control" name="name">
+                <form action="send-mail/" method="post" id="main-contact-form">
+                    <div class="defaultform">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input type="text" required placeholder="Name" class="form-control" name="name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" required placeholder="Email" class="form-control" name="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" required placeholder="Subject" class="form-control" name="subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea required placeholder="Message" rows="8" class="form-control" name="message"></textarea>
+                        </div>
+                        <button class="btn btn-primary" type="submit">SUBMIT</button>
                     </div>
-                    <div class="form-group">
-                        <input type="email" required placeholder="Email" class="form-control" name="email">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" required placeholder="Subject" class="form-control" name="subject">
-                    </div>
-                    <div class="form-group">
-                        <textarea required placeholder="Message" rows="8" class="form-control" name="message"></textarea>
-                    </div>
-                    <button class="btn btn-primary" type="submit">SUBMIT</button>
-                </div>
-            </form>
+                </form>
             </div>
 
 
@@ -668,6 +567,7 @@
 
         </div>
     </section><!--/#get-in-touch-->
+    {% endif %}
 
     <footer id="footer">
         <div class="container text-center">

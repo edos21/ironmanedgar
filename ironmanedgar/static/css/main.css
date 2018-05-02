@@ -1013,3 +1013,6 @@ ul.nostyle i {
 	#animated-number strong{ font-size:17px;}
 	#blog .blog-post.blog-large .entry-thumbnail{ padding-top:0px;}
 	}
+.navbar-brand>img{
+  max-height: 35px;
+}

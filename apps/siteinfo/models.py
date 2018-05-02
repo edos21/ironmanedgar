@@ -11,7 +11,7 @@ class  Section(models.Model):
 
 class SiteInfo(models.Model):
     name = models.CharField(_("Name"), max_length=50)
-    logo = models.FileField(_('File'), upload_to='articles_files/', null=True, blank=True)
+    logo = models.FileField(_('Logo'), upload_to='articles_files/', null=True, blank=True)
     #Contact Info
     email = models.EmailField(_("Email"), help_text="required for contact form")
     phone = models.CharField(_("Phone"), max_length=20, null=True, blank=True)
