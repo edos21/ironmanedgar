@@ -1,0 +1,39 @@
+{% load  staticfiles articles_tags %}
+{% get_articles "blog" as articles %}
+<section id="blog">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title text-center wow fadeInDown">Latest Blogs</h2>
+            <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+        </div>
+
+         <div class="row">
+         <div id="owl-example" class="owl-carousel">
+            {% for article in articles %}
+            <div class="text-center item">
+                <div class="blog-post blog-large wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="0ms">
+                    <article>
+                        <header class="entry-header">
+                            <div class="entry-thumbnail">
+                                <img src="{{ MEDIA_URL }}{{ article.file }}" alt="">
+
+                            </div>
+                            <div class="entry-date">{{ article.pub_date }}</div>
+                            <h2 class="entry-title"><a href="#">{{ article.title }}</a></h2>
+                        </header>
+
+                        <div class="entry-content">
+                            <P>{{ article.description }}</P>
+                        </div>
+
+
+                    </article>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+        </div>
+
+    </div>
+    </section>

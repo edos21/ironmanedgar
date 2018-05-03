@@ -108,14 +108,20 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 ARTICLE_BLOCKS = (
-    ('slider-home', '[Home/Slider] (1377*700)',
+    ('slider-home', 'Home/Slider (1377*700)',
      {'template_name': 'articles/slider.html'}),
-    ('service-home', '[Home/Service] (icon 88*58)',
+    ('service-home', 'Service (icon 88*58)',
      {'template_name': 'articles/services.html'}),
-    ('fun-facts', '[Home/FunFacts]',
+    ('fun-facts', 'FunFacts',
      {'template_name': 'articles/fun-facts.html'}),
-    ('portfolio', '[Home/Portfolio] (project image)',
+    ('portfolio', 'Portfolio (project image)',
      {'template_name': 'articles/portfolio.html'}),
+    ('team', 'Team (image 263*279)',
+     {'template_name': 'articles/team.html'}),
+    ('blog', 'Blog (image 360*240)',
+     {'template_name': 'articles/blog.html'}),
+    ('testimonial', 'Testimonial (image 360*240)',
+     {'template_name': 'articles/testimonial.html'}),
 )
 
 # Internationalization

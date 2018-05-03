@@ -1,0 +1,26 @@
+{% load  staticfiles articles_tags %}
+{% get_articles "testimonial" as articles %}
+<section id="testimonial">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title text-center wow fadeInDown">testimonials</h2>
+            <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+        </div>
+
+        <div class="row">
+            {% for article in articles %}
+            <div class="col-sm-6">
+                <div class="panel-one">
+                    <div class="user-img"><img alt="" src="{{ MEDIA_URL }}{{ article.file }}"></div>
+                    <div class="testi-info">
+                        <h4>{{ article.title }}</h4>
+                        <p>{{ article.description }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+</section> <!--/#testimonial-->

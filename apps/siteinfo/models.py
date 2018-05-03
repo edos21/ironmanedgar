@@ -3,7 +3,9 @@ from django.utils.translation import ugettext_lazy as _
 # Create your models here.
 
 class  Section(models.Model):
-    name = models.CharField(_("Section Name"), max_length=50)
+    name = models.CharField(_("ID Name"), max_length=50)
+    label_name = models.CharField(_("Section Name"), max_length=50, null=True)
+    description = models.TextField(_("Description"), null=True, blank=True)
 
     def __str__(self):
         return self.name
