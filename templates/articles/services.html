@@ -14,7 +14,7 @@
                   <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="{{ forloop.counter0 }}00ms">
                       <div class="media service-box">
                           <div class="pull-left">
-                            {% thumbnail MEDIA_URL article.file "88x58" crop="center" as im %}
+                            {% thumbnail article.file "88x58" crop="center" as im %}
                                 <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
                             {% endthumbnail %}
                           </div>
