@@ -1,4 +1,4 @@
-{% load  staticfiles articles_tags %}
+{% load  staticfiles articles_tags thumbnail %}
 {% get_articles "service-home" as articles %}
 <section id="services" >
       <div class="container">
@@ -14,7 +14,9 @@
                   <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="{{ forloop.counter0 }}00ms">
                       <div class="media service-box">
                           <div class="pull-left">
-                              <img src="{{ MEDIA_URL }}{{ article.file }}" alt="img">
+                            {% thumbnail article.file "88x58" crop="center" as im %}
+                                <img src="{{ MEDIA_URL }}{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+                            {% endthumbnail %}
                           </div>
                           <div class="media-body">
                               <h4 class="media-heading">{{article.title}}</h4>

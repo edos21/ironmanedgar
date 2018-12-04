@@ -20,4 +20,4 @@ whitenoise = "==3.3.1"
 
 
 [dev-packages]
-
+sorl-thumbnail = "==12.5"
