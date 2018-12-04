@@ -163,7 +163,9 @@ ul.nostyle i {
   -webkit-animation-name: scaleIn;
   animation-name: scaleIn;
 }
-
+.navbar-header{
+  width: 300px;
+}
 
 @media(min-width:767px) {
     .navbar {
@@ -227,7 +229,7 @@ ul.nostyle i {
     -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
   }
-  
+
   #main-menu.navbar-default .navbar-nav > li > a {
     padding-top: 20px;
     padding-bottom: 20px; font-size:16px;font-family: 'Roboto-regular'; font-weight:normal;
@@ -743,7 +745,7 @@ ul.nostyle i {
   padding: 5px 10px; background: #fff;
 }
 #pricing ul.pricing li.plan-header {
- 
+
   border-radius: 4px 4px 0 0;
   margin: -15px -15px 10px;
   padding: 15px 15px 30px;
@@ -833,7 +835,7 @@ ul.nostyle i {
 }
 
 #blog .blog-post {
-  padding: 15px; background:#fff; 
+  padding: 15px; background:#fff;
 }
 #blog .blog-post .item {
   height: 200px; }
@@ -996,7 +998,7 @@ ul.nostyle i {
 	#meet-team .team-member{ margin-bottom:25px;}
 	#meet-team .team-member .team-img, #meet-team .team-member .team-info h3 { text-align:center;}
 	#meet-team .team-member .team-info span { text-align:center; display:block;}
-	
+
 	}
 
 @media (max-width:767px) {
@@ -1006,7 +1008,7 @@ ul.nostyle i {
 	#blog .blog-post{ margin-bottom:20px;}
 
 	}
-	
+
 @media (max-width:500px){
 	#blog .blog-post.blog-large .entry-thumbnail img, .team-img img{ width:100%;}
 	.animated-number{ height:130px; width:130px; line-height:130px; font-size:22px;}
