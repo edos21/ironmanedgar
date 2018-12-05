@@ -11,4 +11,3 @@ def site_info(request):
             'site':site,
             'sections':sections,
         }
-
