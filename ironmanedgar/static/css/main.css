@@ -296,6 +296,7 @@ ul.nostyle i {
 }
 #main-slider .slider-inner h2 {
   margin-top: 247px;
+  padding-top: 15px;
   font-size: 40px;
   line-height: 1;
   text-transform: capitalize; font-family:'Roboto-thin';
@@ -314,7 +315,7 @@ ul.nostyle i {
   color: #45aed6;
 }
 #main-slider .slider-inner .btn {
-  margin-top: 20px; background:transparent; border:3px solid #f26522; border-radius:30px;
+  margin-top: 20px; background:transparent; border:3px solid #f26522; border-radius:30px;margin-bottom: 15px;
 }
 #main-slider .slider-inner .btn.btn-primary{ padding:10px 46px; font-size:22px;}
 #main-slider .slider-inner .btn.btn-primary:hover{ background:#f26522;}
@@ -347,6 +348,12 @@ ul.nostyle i {
 #main-slider .owl-next {
   right: -35px;
   text-indent: -14px;
+}
+.carousel-content{
+  background: rgba(200,200,200, 0.6);
+  border-radius: 20px;
+  position: relative;
+  top: 150px;
 }
 #bar {
   width: 0%;
