@@ -1,10 +1,11 @@
-{% load  staticfiles articles_tags %}
+{% load  staticfiles articles_tags thumbnail %}
 {% get_articles "slider-home" as articles %}
 
 <section id="main-slider">
     <div class="owl-carousel">
         {% for article in articles %}
-        <div class="item" style="background-image: url({{ MEDIA_URL }}{{ article.file }});">
+        {% thumbnail article.file "1377x700" crop="center" as im %}                
+        <div class="item" style="background-image: url({{ im.url }})">
             <div class="slider-inner">
                 <div class="container">
                     <div class="row">
@@ -19,6 +20,7 @@
                 </div>
             </div>
         </div><!--/.item-->
+        {% endthumbnail %}
         {% endfor %}
     </div><!--/.owl-carousel-->
 </section><!--/#main-slider-->
