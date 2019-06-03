@@ -160,10 +160,12 @@ STATICFILES_DIRS = [
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-EMAIL_HOST = 'smtp.mailtrap.io'
-EMAIL_HOST_USER = '37740a709beb42'
-EMAIL_HOST_PASSWORD = '469c81d05cbc05'
-EMAIL_PORT = '2525'
+
+EMAIL_HOST = 'smtp.webfaction.com'
+EMAIL_HOST_USER = 'el_electric'
+EMAIL_HOST_PASSWORD = 'Z-/+=[>k6~tF6G%$'
+DEFAULT_FROM_EMAIL = 'contacto@edgarironman.webfactional.com'
+SERVER_EMAIL = 'contacto@edgarironman.webfactional.com'
 
 try:
     from .local_settings import *
