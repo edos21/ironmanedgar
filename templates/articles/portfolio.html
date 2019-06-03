@@ -11,7 +11,9 @@
         {% for article in articles %}
             <div class="portfolio-item">
                 <div class="portfolio-item-inner">
-                    <img class="img-responsive" src="{{ MEDIA_URL }}{{ article.file }}">
+                    {% thumbnail article.file "260x180" crop="center" as im %}
+                        <img class="img-responsive" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+                    {% endthumbnail %}
                     <div class="portfolio-info">
                         <h3>{{ article.title }}</h3>
                         {{ article.description }}
