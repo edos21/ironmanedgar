@@ -165,7 +165,6 @@ EMAIL_HOST = 'smtp.webfaction.com'
 EMAIL_HOST_USER = 'el_electric'
 EMAIL_HOST_PASSWORD = 'Z-/+=[>k6~tF6G%$'
 DEFAULT_FROM_EMAIL = 'contacto@edgarironman.webfactional.com'
-SERVER_EMAIL = 'contacto@edgarironman.webfactional.com'
 
 try:
     from .local_settings import *
