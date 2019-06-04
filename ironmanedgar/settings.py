@@ -167,6 +167,6 @@ EMAIL_HOST_PASSWORD = 'Z-/+=[>k6~tF6G%$'
 DEFAULT_FROM_EMAIL = 'contacto@edgarironman.webfactional.com'
 
 try:
-    from local_settings import *
+    from .local_settings import *
 except ImportError:
     pass
